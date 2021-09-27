@@ -1,6 +1,6 @@
 # know-ur-ip
 
-This application serves the ip of the client and the current timestamp.
+The API serves the IP Address (IPv4/IPv6) of the requesting client with timestamp
 
 ## Dependencies
 1. Node JS 
@@ -14,7 +14,7 @@ This application serves the ip of the client and the current timestamp.
 ```NodeJS
 node app.js
 ```
-2. Open the browser and check with the localhost:3000
+2. Open the browser and check with the http://localhost:3000
 3. The ip and the timestamp will be displayed in the JSON format
 
 ## Running the app via Docker
@@ -30,7 +30,7 @@ docker build -t ipimg .
 ```Shell
 docker run -it ipimg
 ```
-5. Open the browser and check with the server ip:3000, you should be able to see the ip and timestamp in the JSON format.
+5. Open the browser and check with the [http://<REMOTE_ADDR>:3000](http://<REMOTE_ADDR>:3000) , you should be able to see the ip and timestamp in the JSON format.
 
 ## Running the app via Kubernetes
 1. Clone the code from the repository into your local machine.
@@ -44,8 +44,8 @@ kubectl apply -f ip-deployments.yml
 ```Shell
 kubectl apply -f ip-service.yml 
 ```
-4. Open the browser and check with the NodePort Ip:30001 , you should be able to see the ip and timestamp in the JSON format.
-5. If that doesnt work then we can also port forward to the specific ip and check, which in this case is should open with localhost:3000
+4. Open the browser and check with the [http://<REMOTE_ADDR>:30001](http://<REMOTE_ADDR>:30001) , you should be able to see the ip and timestamp in the JSON format.
+5. If that doesnt work then we can also port forward to the specific ip and check, which in this case is should open with http://localhost:3000
 
 ```Shell
 kubectl port-forward svc/ip-service 3000 --address 0.0.0.0
