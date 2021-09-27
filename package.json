@@ -1,0 +1,14 @@
+{
+  "name": "know-ur-ip",
+  "version": "1.0.0",
+  "description": "This serves the client's ip address and the current timestamp as JSON",
+  "main": "app.js",
+  "keywords": [],
+  "author": "Karthik Venkatesh",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "ipware": "^2.0.0"
+  }
+}
