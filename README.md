@@ -51,4 +51,8 @@ kubectl apply -f ip-service.yml
 kubectl port-forward svc/ip-service 3000 --address 0.0.0.0
 ```
 
+## Pull image from Dockerhub
+
+Find the docker image link here:
+[know-ur-ip Docker Image](https://hub.docker.com/r/kryptoninja/ipimg)
 
